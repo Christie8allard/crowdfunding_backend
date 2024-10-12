@@ -100,6 +100,17 @@ class PledgeDetail(APIView):
             return pledge
         except Pledge.DoesNotExist:
             raise Http404
+        
+    def get(self, request, pk):
+        pledge = self.get_object(pk)
+        serializer = PledgeSerializer(pledge)
+        return Response(serializer.data)
+    
+    def delete(self, request, pk):
+        pledge = self.get_object(pk)
+        pledge.delete()
+        return Response()
+        
     
     def put(self, request, pk):
         pledge = self.get_object(pk)
