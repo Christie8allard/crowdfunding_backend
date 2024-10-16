@@ -26,6 +26,11 @@ class CustomUserList(APIView):
             status=status.HTTP_400_BAD_REQUEST
         )
     
+    def delete(self, request, pk):
+        user = self.get_object(pk)
+        user.delete()
+        return Response()
+    
 class CustomUserDetail(APIView):
     def get_object(self, pk):
         try:
@@ -51,6 +56,11 @@ class CustomUserDetail(APIView):
             serializer.errors,
             status=status.HTTP_400_BAD_REQUEST
         )
+    
+    def delete(self, request, pk):
+        user = self.get_object(pk)
+        user.delete()
+        return Response()
 
 class CustomAuthToken(ObtainAuthToken):
   def post(self, request, *args, **kwargs):

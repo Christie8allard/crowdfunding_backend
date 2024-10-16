@@ -35,14 +35,14 @@ It can be helpful to keep the markdown preview open in VS Code so that you can s
 | projects/ | GET | Returns the project with the ID of "1" | n/a | 200 | n/a
 | pledges/1 | PUT | Returns the project with the ID of "1" | Project object | 200 | Must be logged in. Must be project owner.
 | pledges/ | POST | Creates a new pledge | Pledge object | 201 | Must be logged in. Must be project owner.
-| pledges/2 | GET | Get the pledge with ID of "2" | n/a | 200 | n/a
+| pledges/2 | GET | Get the pledge with ID of "2" | n/a | 200 | Must be logged in. Must be project owner.
 | pledges/1 | DELETE | Deletes the pledges of ID of "1" | n/a | 200 | Must be logged in. Must be pledge owner. 
-| pledges/ | GET | list of all pledges for logged in users | xxx | 200 | Must be logged in. Must be pledge owner.
+| pledges/ | GET | list of all pledges for logged in users | n/a | 200 | Must be logged in. Must be pledge owner.
 | users/ | POST | Create user | {"username": "Type user name here","password": "Type password here"} |201 | Must be logged in.
 | users/1 | GET | Find single user | n/a | 200 | Must be logged in.
 | users | GET | List of all users | n/a | 200 | Must be logged in.
 | users/1 | PUT | So users can update themselves | n/a | 200 | Must be logged in.
-| user/1 | Delete | Delete user | xxx | xxx | Must be logged in
+| user/1 | Delete | Delete user | n/a | 200 | Must be logged in
 
 
 
