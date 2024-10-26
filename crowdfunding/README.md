@@ -48,3 +48,14 @@ It can be helpful to keep the markdown preview open in VS Code so that you can s
 
 ### DB Schema
 ![]( {{ ./relative/path/to/your/schema/image.png }} )
+![alt text](image.png)
+
+Successful GET
+![alt text](image-1.png)
+
+Successful POST
+![alt text](image-2.png)
+
+Successful Token returned
+![alt text](image-3.png)
+
