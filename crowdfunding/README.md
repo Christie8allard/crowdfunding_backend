@@ -59,3 +59,30 @@ Successful POST
 Successful Token returned
 ![alt text](image-3.png)
 
+How to register a new user and create a new project:
+New User:
+- URL Post request 
+- Complete JSON e.g.
+{
+	"username": "Sarah",
+	"password": "Password"
+
+}
+- Hit SEND 
+- Get 201 Created message
+- joy
+
+New Project:
+- URL Post request
+- Complete JSON e.g.
+{
+	"title": "Remix; Another example project",
+	"description": "Brat.",
+	"goal": 100,
+	"image": "https://via.placeholder.com/300.jpg",
+	"is_open": true,
+	"date_created": "2020-03-20T14:28:23.382748Z"
+}
+- Hit SEND 
+- Get 201 Created message
+- joy
